@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import torchvision
 import numpy as np
+import os
 
 
 class DatasetImageHandler:
@@ -18,6 +19,9 @@ class DatasetImageHandler:
         ])
         self.dataset = datasets.ImageFolder(root=dataset_path, transform=self.transform)
         self.data_loader = DataLoader(self.dataset, batch_size=batch_size, shuffle=True, num_workers=0)
+
+    def get_classes(self, path):
+        return os.listdir(path)
 
     def to_tensor(self):
         return self.dataset
@@ -68,9 +72,9 @@ class Classifier(nn.Module):
         X = self.apply_pulling(X)
         X = self.get_feaure_map(X, n_channel=32)
         X = F.relu(X)
-        print("Shape before flattening:", X.shape)  # Add this line
+        # print("Shape before flattening:", X.shape)  # Add this line
         X = self.flattened(X)
-        print("Shape after flattening:", X.shape)  # Add this line
+        # print("Shape after flattening:", X.shape)  # Add this line
         X = self.I(X)
         X = F.relu(X)
         X = self.H(X)
@@ -98,8 +102,8 @@ class Trainer:
         for epoch in range(self.n_epochs):
             total = 0
             batch = next(iter(self.data_loader))
-            print(len(batch))  # This will show how many elements are returned (should be 2 for standard ImageFolder)
-            print(type(batch))  # This will show what type the batch is (should be a tuple)
+            # print(len(batch))  # This will show how many elements are returned (should be 2 for standard ImageFolder)
+            # print(type(batch))  # This will show what type the batch is (should be a tuple)
             print(batch)  # 
             for X, Y in self.data_loader:
                 self.optimizer.zero_grad()
@@ -122,20 +126,21 @@ class Trainer:
 
 
 def main():
+    DATASET = 'Dataset/train'
     L_RATE = 0.001
     O = 25
     BATCH_SIZE = 15
     N_EPOCHS = 10
-    dataset = DatasetImageHandler('Dataset/train', BATCH_SIZE)
-    
-    model = Classifier(O)
-    trainer = Trainer(dataset.data_loader, model, L_RATE, N_EPOCHS)
-    print('initialized')
+    dataset = DatasetImageHandler(DATASET, BATCH_SIZE)
+    print(dataset.get_classes(DATASET))
+    # model = Classifier(O)
+    # trainer = Trainer(dataset.data_loader, model, L_RATE, N_EPOCHS)
+    # print('initialized')
     # Actual training will happen here
     # dataset.plot_batch()
-    trainer.train()
-    trainer.plot_loss()
-    torch.save(model.state_dict(), "the-pocket-pharmacist.pth")
+    # trainer.train()
+    # trainer.plot_loss()
+    # torch.save(model.state_dict(), "the-pocket-pharmacist.pth")
 
 
 if __name__ == '__main__':
