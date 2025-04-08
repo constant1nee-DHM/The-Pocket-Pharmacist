@@ -1,0 +1,387 @@
+[
+  {
+    "label": "Terbisil",
+    "type": "Antifungal",
+    "main_chemical_compound": "Terbinafine hydrochloride",
+    "country_of_manufacture": "Eastern Europe or Turkey",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Chronic or active liver disease",
+      "Hypersensitivity to terbinafine"
+    ],
+    "safe_dose_adults": "250 mg once daily for 2\u20136 weeks",
+    "safe_dose_children": "Dosing by body weight; consult a doctor",
+    "use_cases": "Fungal infections of the skin, nails, and scalp"
+  },
+  {
+    "label": "Ultiva",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Remifentanil hydrochloride",
+    "country_of_manufacture": "UK/USA",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Hypersensitivity to remifentanil",
+      "Severe respiratory depression",
+      "Absence of resuscitation facilities"
+    ],
+    "safe_dose_adults": "0.1\u20130.15 \u00b5g/kg/min IV infusion",
+    "safe_dose_children": "Weight-based dosing under supervision",
+    "use_cases": "Pain control during surgery and intensive care"
+  },
+  {
+    "label": "Unisom",
+    "type": "Sedative / Antihistamine",
+    "main_chemical_compound": "Doxylamine succinate",
+    "country_of_manufacture": "USA",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Glaucoma",
+      "Severe asthma",
+      "Urinary retention",
+      "Hypersensitivity to antihistamines"
+    ],
+    "safe_dose_adults": "25 mg 30 minutes before bedtime",
+    "safe_dose_children": "Not recommended under 12 years",
+    "use_cases": "Occasional insomnia, morning sickness (with vitamin B6)"
+  },
+  {
+    "label": "Valium Diazepam",
+    "type": "Benzodiazepine",
+    "main_chemical_compound": "Diazepam",
+    "country_of_manufacture": "Worldwide",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory insufficiency",
+      "Sleep apnea",
+      "Myasthenia gravis",
+      "Hepatic impairment"
+    ],
+    "safe_dose_adults": "2\u201310 mg, 2\u20134 times daily",
+    "safe_dose_children": "1\u20132.5 mg 3\u20134 times daily",
+    "use_cases": "Anxiety, alcohol withdrawal, muscle spasms, seizures"
+  },
+  {
+    "label": "Xanor",
+    "type": "Benzodiazepine",
+    "main_chemical_compound": "Alprazolam",
+    "country_of_manufacture": "Turkey or EU",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Acute narrow-angle glaucoma",
+      "Hypersensitivity to benzodiazepines"
+    ],
+    "safe_dose_adults": "0.25\u20130.5 mg 2\u20133 times daily",
+    "safe_dose_children": "Not recommended under 18 years",
+    "use_cases": "Anxiety disorders, panic disorder"
+  },
+  {
+    "label": "A-ferin",
+    "type": "Analgesic / Antipyretic / Decongestant",
+    "main_chemical_compound": "Paracetamol, Chlorpheniramine maleate, Pseudoephedrine",
+    "country_of_manufacture": "Turkey",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Severe hypertension",
+      "Severe coronary artery disease",
+      "Hypersensitivity to ingredients"
+    ],
+    "safe_dose_adults": "1 tablet every 6\u20138 hours",
+    "safe_dose_children": "Not recommended unless specified by a physician",
+    "use_cases": "Cold and flu symptoms relief"
+  },
+  {
+    "label": "Apodorm",
+    "type": "Sedative / Hypnotic",
+    "main_chemical_compound": "Nitrazepam",
+    "country_of_manufacture": "Europe",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory insufficiency",
+      "Sleep apnea syndrome",
+      "Myasthenia gravis"
+    ],
+    "safe_dose_adults": "5\u201310 mg before bedtime",
+    "safe_dose_children": "Not recommended",
+    "use_cases": "Short-term treatment of insomnia"
+  },
+  {
+    "label": "Apronax",
+    "type": "NSAID (Non-Steroidal Anti-Inflammatory Drug)",
+    "main_chemical_compound": "Naproxen",
+    "country_of_manufacture": "Mexico",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Active peptic ulcer",
+      "Severe renal or hepatic impairment",
+      "Hypersensitivity to NSAIDs"
+    ],
+    "safe_dose_adults": "250\u2013500 mg twice daily",
+    "safe_dose_children": "Not recommended under 12 years",
+    "use_cases": "Pain, inflammation, and menstrual cramps"
+  },
+  {
+    "label": "Arveles",
+    "type": "NSAID",
+    "main_chemical_compound": "Dexketoprofen",
+    "country_of_manufacture": "Spain",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Active gastrointestinal bleeding",
+      "Severe heart failure",
+      "Hypersensitivity to ketoprofen"
+    ],
+    "safe_dose_adults": "25 mg every 8 hours",
+    "safe_dose_children": "Not recommended",
+    "use_cases": "Acute mild to moderate pain"
+  },
+  {
+    "label": "Aspirin",
+    "type": "NSAID / Antiplatelet",
+    "main_chemical_compound": "Acetylsalicylic acid",
+    "country_of_manufacture": "Worldwide",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Peptic ulcer",
+      "Bleeding disorders",
+      "Asthma induced by NSAIDs"
+    ],
+    "safe_dose_adults": "300\u2013600 mg every 4\u20136 hours",
+    "safe_dose_children": "Not recommended under 16 due to Reye\u2019s syndrome risk",
+    "use_cases": "Pain, fever, inflammation, and prevention of blood clots"
+  },
+  {
+    "label": "Dikloron",
+    "type": "NSAID",
+    "main_chemical_compound": "Diclofenac sodium",
+    "country_of_manufacture": "Turkey",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Gastrointestinal ulcers",
+      "Renal impairment",
+      "Heart failure"
+    ],
+    "safe_dose_adults": "75\u2013150 mg per day in divided doses",
+    "safe_dose_children": "Not recommended under 14 years",
+    "use_cases": "Inflammation and pain in arthritis or injuries"
+  },
+  {
+    "label": "Dolcontin",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Morphine sulfate",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Respiratory depression",
+      "Paralytic ileus",
+      "Head injuries"
+    ],
+    "safe_dose_adults": "Controlled-release 30\u201360 mg every 12 hours",
+    "safe_dose_children": "Dosage varies; consult pediatric specialist",
+    "use_cases": "Severe chronic pain"
+  },
+  {
+    "label": "Dolorex",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Tramadol",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Acute intoxication with alcohol or drugs",
+      "Severe respiratory depression",
+      "Epilepsy not controlled by treatment"
+    ],
+    "safe_dose_adults": "50\u2013100 mg every 4\u20136 hours",
+    "safe_dose_children": "Not recommended under 12",
+    "use_cases": "Moderate to severe pain"
+  },
+  {
+    "label": "Fentanyl",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Fentanyl citrate",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Respiratory depression",
+      "Severe asthma",
+      "Hypersensitivity"
+    ],
+    "safe_dose_adults": "Transdermal patch 12\u2013100 mcg/hour every 72 hours",
+    "safe_dose_children": "Specialist decision only",
+    "use_cases": "Chronic severe pain"
+  },
+  {
+    "label": "Hametan",
+    "type": "Topical agent / Healing cream",
+    "main_chemical_compound": "Hamamelis virginiana extract",
+    "country_of_manufacture": "Turkey",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Hypersensitivity to plant extracts"
+    ],
+    "safe_dose_adults": "Apply thinly to affected area 1\u20132 times daily",
+    "safe_dose_children": "Same as adult usage",
+    "use_cases": "Minor burns, skin irritation, and wound healing"
+  },
+  {
+    "label": "Imovane",
+    "type": "Hypnotic (sleep aid)",
+    "main_chemical_compound": "Zopiclone",
+    "country_of_manufacture": "Canada",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory insufficiency",
+      "Sleep apnea syndrome",
+      "Myasthenia gravis",
+      "Known hypersensitivity to zopiclone"
+    ],
+    "safe_dose_adults": "7.5 mg taken shortly before bedtime",
+    "safe_dose_children": "Same as adult usage",
+    "use_cases": "Short-term treatment of insomnia"
+  },
+  
+  {
+    "label": "Majezik",
+    "type": "Nonsteroidal anti-inflammatory drug (NSAID)",
+    "main_chemical_compound": "Flurbiprofen",
+    "country_of_manufacture": "Turkey",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Active peptic ulceration",
+      "Severe heart failure", 
+      "Known hypersensitivity to flurbiprofen or other NSAIDs"
+    ],
+    "safe_dose_adults": "Typically, 50\u2013100 mg taken two to three times daily",
+    "safe_dose_children": "Not recommended for use in children under 12 years of age",
+    "use_cases": "Relief of pain and inflammation in conditions such as rheumatoid arthritis, osteoarthritis, and ankylosing spondylitis"
+  },
+  {
+    "label": "Metpamid",
+    "type": "Antiemetic and gastroprokinetic agent",
+    "main_chemical_compound": "Metoclopramide",
+    "country_of_manufacture": "Varies by manufacturer",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Gastrointestinal bleeding", 
+      "Mechanical obstruction", 
+      "Perforation", 
+      "Pheochromocytoma", 
+      "History of neuroleptic malignant syndrome", 
+      "Known hypersensitivity to metoclopramide"
+    ],
+    "safe_dose_adults": "10 mg up to three times daily",
+    "safe_dose_children": "Dose depends on body weight; typically, 0.1\u20130.15 mg/kg body weight, up to three times daily",
+    "use_cases": "Prevention and treatment of nausea and vomiting"
+  },
+  {
+    "label": "Midozalam B. Braun",
+    "type": "Benzodiazepine sedative",
+    "main_chemical_compound": "Midazolam",
+    "country_of_manufacture": "Germany",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory insufficiency", 
+      "Myasthenia gravis", 
+      "Sleep apnea syndrome", 
+      "Hypersensitivity to midazolam or benzodiazepines"
+    ],
+    "safe_dose_adults": "Dosage varies depending on use; for sedation, typically 1\u20132.5 mg intravenously over 2 minutes",
+    "safe_dose_children": "Dosage varies by age and weight; typically 0.05\u20130.1 mg/kg intravenously",
+    "use_cases": "Induction of anesthesia, procedural sedation"
+  },
+  {
+    "label": "Morphin",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Morphine sulfate",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Respiratory depression", 
+      "Head injury", 
+      "Paralytic ileus", 
+      "Hypersensitivity to morphine"
+    ],
+    "safe_dose_adults": "Initial dose of 5\u201310 mg subcutaneously or intramuscularly every 4 hours as needed",
+    "safe_dose_children": "Dosage varies by age and weight; typically 0.1\u20130.2 mg/kg every 4 hours as needed",
+    "use_cases": "Relief of severe pain"
+  },
+  {
+    "label": "Nobligan Retard",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Hamamelis virginiana extract",
+    "country_of_manufacture": "Germany",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Acute intoxication with alcohol", 
+      "Hypnotics", 
+      "Analgesics", 
+      "Opioids, or psychotropic drugs", 
+      "Epilepsy not adequately controlled by treatment", 
+      "Hypersensitivity to tramadol"
+    ],
+    "safe_dose_adults": "100 mg twice daily; maximum 400 mg per day",
+    "safe_dose_children": "Not recommended for children under 12 years",
+    "use_cases": "Management of moderate to severe pain"
+  },
+  {
+    "label": "Oxycontin",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Oxycodone hydrochloride",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory depression", 
+      "Acute or severe bronchial asthma", 
+      "Known or suspected gastrointestinal obstruction", 
+      "Hypersensitivity to oxycodone"
+    ],
+    "safe_dose_adults": "10 mg every 12 hours; dosage may be adjusted based on patient response",
+    "safe_dose_children": "Not recommended for individuals under 18 years",
+    "use_cases": "Management of moderate to severe chronic pain requiring continuous, long-term opioid treatment"
+  },
+  {
+    "label": "Oxynorm",
+    "type": "Opioid analgesic",
+    "main_chemical_compound": "Oxycodone hydrochloride",
+    "country_of_manufacture": "Various",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory depression", 
+      "Acute or severe bronchial asthma", 
+      "Known or suspected gastrointestinal obstruction", 
+      "Hypersensitivity to oxycodone"
+    ],
+    "safe_dose_adults": "5 mg every 4\u20136 hours as needed; dosage may be adjusted based on patient response",
+    "safe_dose_children": "Not recommended for individuals under 18 years",
+    "use_cases": "Management of moderate to severe acute pain"
+  },
+  {
+    "label": "Parol",
+    "type": "Analgesic and antipyretic",
+    "main_chemical_compound": "Paracetamol (Acetaminophen)",
+    "country_of_manufacture": "Turkey",
+    "prescription_required_uk": false,
+    "contraindications": [
+      "Severe liver impairment", 
+      "Hypersensitivity to paracetamol"
+    ],
+    "safe_dose_adults": "500 mg to 1 g every 4\u20136 hours; maximum 4 g per day.",
+    "safe_dose_children": "Dose varies by weight; typically 10\u201315 mg/kg every 4-6 hours",
+    "use_cases": "Relief of mild to moderate pain and reduction of fever"
+  },
+  {
+    "label": "Sobril",
+    "type": "Anxiolytic (anti-anxiety medication)",
+    "main_chemical_compound": "Oxazepam",
+    "country_of_manufacture": "Sweden",
+    "prescription_required_uk": true,
+    "contraindications": [
+      "Severe respiratory insufficiency",
+      "Sleep apnea syndrome",
+      "Myasthenia gravis",
+      "Hypersensitivity to benzodiazepines"
+    ],
+    "safe_dose_adults": "10\u201330 mg 1\u20133 times daily depending on severity",
+    "safe_dose_children": "Not recommended under 6 years; use with caution and adjusted dosage",
+    "use_cases": "Short\u2013term relief of anxiety, agitation, and alcohol withdrawal symptoms"
+  }
+]
