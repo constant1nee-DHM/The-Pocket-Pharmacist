@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS  # Import CORS
 import os
+import magic_stuff
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
@@ -35,12 +36,32 @@ def upload_file():
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
     
-    if file and allowed_file(file.filename):
-        filename = file.filename
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        return jsonify({'message': f'File {filename} uploaded successfully!'}), 200
-    
-    return jsonify({'error': 'File type not allowed'}), 400
+    if not file or not allowed_file(file.filename):
+        return jsonify({'error': 'File type not allowed'}), 400
+
+    filename = file.filename
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+    # Pass image to identification function (magic stuff using ML)
+    medication_name = magic_stuff.identify_medication(file)
+
+    return magic_stuff.medication_info(medication_name)
+
+    # return """{"medicine": {
+    #                     "label": "Ultiva",
+    #                     "type": "Opioid analgesic",
+    #                     "main_chemical_compound": "Remifentanil hydrochloride",
+    #                     "country_of_manufacture": "UK/USA",
+    #                     "prescription_required_uk": true,
+    #                     "contraindications": [
+    #                         "Hypersensitivity to remifentanil",
+    #                         "Severe respiratory depression",
+    #                         "Absence of resuscitation facilities"
+    #                         ],
+    #                     "safe_dose_adults": "0.1\\u20130.15 \\u00b5g/kg/min IV infusion",
+    #                     "safe_dose_children": "Weight-based dosing under supervision",
+    #                     "use_cases": "Pain control during surgery and intensive care"
+    #                     }, "message": "File uploaded successfully!"}""", 200
 
 if __name__ == '__main__':
     # Create the upload folder if it doesn't exist

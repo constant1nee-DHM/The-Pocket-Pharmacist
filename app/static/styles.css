@@ -1,48 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background color */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
-    text-align: center;
-    background: white;
+    background-color: #ffffff;
+    border-radius: 10px; /* Consistent border radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
 video {
     width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    height: auto; /* Ensures responsive height */
+    border-radius: 10px; /* Consistent border radius */
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Added border for consistency */
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Consistent padding */
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #007bff; /* Default button color */
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Consistent margin */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Hover color for default button */
+}
+
+.file-picker-container {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+.file-label {
+    padding: 10px 20px;
+    background-color: #007bff; /* Consistent button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.file-label:hover {
+    background-color: #0056b3; /* Hover color for file label */
+}
+
+.file-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
 }
 
 .screenshot-container {
     margin-top: 20px;
 }
 
+#message {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #dc3545; /* Red color for error messages */
+}
+
+.or-span {
+    display: block; /* Make the span a block element */
+    margin: 20px 0; /* Add margin for spacing above and below */
+    font-size: 1.2em; /* Increase font size for better visibility */
+    color: #555; /* Optional: Change color for better contrast */
+}
+
 img {
     max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #ccc; /* Consistent border */
+    border-radius: 8px; /* Consistent border radius */
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1000; /* Ensure it appears above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    animation: fadeIn 0.3s; /* Optional: Add a fade-in animation */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #007bff; /* Color for the close button */
+}
+
+.close:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+h2::before {
+    content: "💊 "; /* Emoji before the heading */
+}
+
+p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+strong {
+    color: #007bff; /* Color for strong text */
+}
+
+/* Additional styles for the popup content */
+.popup-content p {
+    margin: 10px 0; /* Add some margin for spacing between paragraphs */
+}
+
+.popup-content span {
+    color: #555; /* Color for text within the popup */
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-top: 4px solid #007bff; /* Blue border for the top */
+    border-radius: 50%; /* Circular shape */
+    width: 30px; /* Width of the spinner */
+    height: 30px; /* Height of the spinner */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: 0 auto; /* Center the spinner */
+}
+
+.loading-indicator {
+    font-size: 1.2em; /* Adjust font size */
+    color: #007bff; /* Color for the loading text */
+    margin: 10px 0; /* Margin for spacing */
+    text-align: center; /* Center the loading text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Adjust heading size for smaller screens */
+    }
+
+    .popup-content {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button padding for smaller screens */
+    }
+}
+
+/* Optional: Fade-in animation for the popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

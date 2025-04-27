@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webcam Screenshot Upload</title>
-    <link rel="stylesheet" href="style.css">
+    <title>The Pocket Pharmacist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Webcam Screenshot Upload</h1>
+        <h1>The Pocket Pharmacist</h1>
         <video id="video" autoplay></video>
         <button id="screenshotBtn">Take Screenshot</button>
         <canvas id="canvas" style="display: none;"></canvas>
         <div id="screenshotContainer" class="screenshot-container"></div>
-        <button id="uploadBtn" style="display: none;">Upload Screenshot</button>
+
+        <span class="or-span">or</span>
+
+        <div class="file-picker-container">
+            <input type="file" id="filePicker" class="file-input" />
+            <label for="filePicker" class="file-label">Choose a file</label>
+            <span id="fileName" class="file-name">No file chosen</span>
+        </div>
+
+        <button id="uploadBtn" style="display: none;">Upload Image</button>
         <p id="message"></p>
+
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <h2 id="medicationLabel"></h2>
+                <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    Loading...
+                </div>
+                <p><strong>Type:</strong> <span id="medicationType"></span></p>
+                <p><strong>Main Chemical Compound:</strong> <span id="mainChemicalCompound"></span></p>
+                <p><strong>Country of Manufacture:</strong> <span id="countryOfManufacture"></span></p>
+                <p><strong>Prescription Required (UK):</strong> <span id="prescriptionRequired"></span></p>
+                <p><strong>Contraindications:</strong> <span id="contraindications"></span></p>
+                <p><strong>Safe Dose (Adults):</strong> <span id="safeDoseAdults"></span></p>
+                <p><strong>Safe Dose (Children):</strong> <span id="safeDoseChildren"></span></p>
+                <p><strong>Use Cases:</strong> <span id="useCases"></span></p>
+            </div>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
