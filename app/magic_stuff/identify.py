@@ -1,34 +1,36 @@
 import time
+import sys
+import os
 import json
+from cnn_model import model 
 
-# from "../../cnn_model/model.py" import infer
 
-DB_JSON = "app/The-Pocket-Pharmacist DB.json"
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open(DB_JSON, 'r') as db_file:
-    db = json.load(db_file)
+# Full path to the JSON file
+DB_JSON = 'app/magic_stuff/The-Pocket-Pharmacist DB.json'
 
-# Function to search for a label in the list of dictionaries
+# Now open it
+
+
+
 def search_by_label(data, label):
-    for item in data:
-        if item.get('label') == label:
-            return item  # Return the entire item if the label matches
-    return None  # Return None if the label is not found
-
-def identify_medication(img):
-    # dummy delay
-    time.sleep(1)
-
-    # run classifier on image...
-
-    # inference code called here
-
-    return "Fentanyl" # "Oxycontin" ... etc
+    with open(DB_JSON, 'r') as db_file:
+        data = json.load(db_file)  
+        for item in data:
+            if item['label'] == label:
+                return item
+        return None
+    
+def identify_medication():
+    return model.main()
 
 def medication_info(med_name):
-    medication = search_by_label(db, med_name)
+    medication = search_by_label(DB_JSON, med_name)
 
     if medication is not None:
         return json.dumps(medication)
 
     return None
+
+print(search_by_label(DB_JSON, 'Aspirin'))

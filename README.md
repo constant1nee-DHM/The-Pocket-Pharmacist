@@ -13,7 +13,7 @@ The Pocket Pharmacist is a web application that leverages machine learning to id
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Machine Learning**: Coming soon...
+- **Machine Learning**: Convolutional Neural Network, MLP, Pytorch, NumPy
 - **Backend**: Flask
 
 ## Installation
@@ -35,7 +35,7 @@ To set up the project locally, follow these steps:
 
 2. **Start Development Server**
    ```bash
-   python3 app/app.py
+   py app/app.py
    ```
 
 ## Get Started
