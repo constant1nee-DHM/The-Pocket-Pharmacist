@@ -1,5 +1,4 @@
-import time
-import sys
+
 import os
 import json
 from cnn_model import model 
@@ -33,4 +32,4 @@ def medication_info(med_name):
 
     return None
 
-print(search_by_label(DB_JSON, 'Aspirin'))
+ #print(search_by_label(DB_JSON, 'Aspirin'))

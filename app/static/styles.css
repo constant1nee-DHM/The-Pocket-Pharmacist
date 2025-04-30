@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Light background color */
+    background-color: #f0f4f8; 
     color: #333;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
 
 .container {
     background-color: #ffffff;
-    border-radius: 10px; /* Consistent border radius */
+    border-radius: 10px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
@@ -32,25 +32,25 @@ h1 {
 
 video {
     width: 100%;
-    height: auto; /* Ensures responsive height */
-    border-radius: 10px; /* Consistent border radius */
+    height: auto;
+    border-radius: 10px; 
     margin-bottom: 20px;
-    border: 1px solid #ccc; /* Added border for consistency */
+    border: 1px solid #ccc; 
 }
 
 button {
-    padding: 10px 15px; /* Consistent padding */
+    padding: 10px 15px; 
     border: none;
     border-radius: 5px;
-    background-color: #007bff; /* Default button color */
+    background-color: #007bff; 
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 10px 0; /* Consistent margin */
+    margin: 10px 0; 
 }
 
 button:hover {
-    background-color: #0056b3; /* Hover color for default button */
+    background-color: #0056b3; 
 }
 
 .file-picker-container {
@@ -58,12 +58,12 @@ button:hover {
 }
 
 .file-input {
-    display: none; /* Hide the default file input */
+    display: none; 
 }
 
 .file-label {
     padding: 10px 20px;
-    background-color: #007bff; /* Consistent button color */
+    background-color: #007bff; 
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -72,7 +72,7 @@ button:hover {
 }
 
 .file-label:hover {
-    background-color: #0056b3; /* Hover color for file label */
+    background-color: #0056b3; 
 }
 
 .file-name {
@@ -89,32 +89,32 @@ button:hover {
 #message {
     margin-top: 20px;
     font-size: 1em;
-    color: #dc3545; /* Red color for error messages */
+    color: #dc3545; 
 }
 
 .or-span {
-    display: block; /* Make the span a block element */
-    margin: 20px 0; /* Add margin for spacing above and below */
-    font-size: 1.2em; /* Increase font size for better visibility */
-    color: #555; /* Optional: Change color for better contrast */
+    display: block; 
+    margin: 20px 0; 
+    font-size: 1.2em; 
+    color: #555;
 }
 
 img {
     max-width: 100%;
-    border: 1px solid #ccc; /* Consistent border */
-    border-radius: 8px; /* Consistent border radius */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
 }
 
-/* Popup Styles */
+
 .popup {
-    display: none; /* Initially hidden */
+    display: none; 
     position: fixed;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); 
     justify-content: center;
     align-items: center;
 }
@@ -127,11 +127,11 @@ img {
     max-width: 500px;
     margin: auto;
     position: absolute;
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Center vertically */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    animation: fadeIn 0.3s; /* Optional: Add a fade-in animation */
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    animation: fadeIn 0.3s; 
 }
 
 .close {
@@ -140,11 +140,11 @@ img {
     right: 10px;
     cursor: pointer;
     font-size: 1.5em;
-    color: #007bff; /* Color for the close button */
+    color: #007bff; 
 }
 
 .close:hover {
-    color: #0056b3; /* Darker color on hover */
+    color: #0056b3; 
 }
 
 h2 {
@@ -154,7 +154,7 @@ h2 {
 }
 
 h2::before {
-    content: "💊 "; /* Emoji before the heading */
+    content: "💊 "; 
 }
 
 p {
@@ -163,51 +163,51 @@ p {
 }
 
 strong {
-    color: #007bff; /* Color for strong text */
+    color: #007bff;
 }
 
-/* Additional styles for the popup content */
+
 .popup-content p {
-    margin: 10px 0; /* Add some margin for spacing between paragraphs */
+    margin: 10px 0; 
 }
 
 .popup-content span {
-    color: #555; /* Color for text within the popup */
+    color: #555; 
 }
 
 .spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
-    border-top: 4px solid #007bff; /* Blue border for the top */
-    border-radius: 50%; /* Circular shape */
-    width: 30px; /* Width of the spinner */
-    height: 30px; /* Height of the spinner */
-    animation: spin 1s linear infinite; /* Spin animation */
-    margin: 0 auto; /* Center the spinner */
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #007bff; 
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    animation: spin 1s linear infinite; 
+    margin: 0 auto; 
 }
 
 .loading-indicator {
-    font-size: 1.2em; /* Adjust font size */
-    color: #007bff; /* Color for the loading text */
-    margin: 10px 0; /* Margin for spacing */
-    text-align: center; /* Center the loading text */
+    font-size: 1.2em; 
+    color: #007bff;
+    margin: 10px 0; 
+    text-align: center; 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
     h1 {
-        font-size: 2em; /* Adjust heading size for smaller screens */
+        font-size: 2em; 
     }
 
     .popup-content {
-        padding: 15px; /* Reduce padding for smaller screens */
+        padding: 15px; 
     }
 
     button {
-        padding: 8px 12px; /* Adjust button padding for smaller screens */
+        padding: 8px 12px; 
     }
 }
 
-/* Optional: Fade-in animation for the popup */
+
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -1,2 +1,7 @@
 Flask==3.1.0
 Flask-CORS==5.0.1
+Torch
+Torchvision
+requests
+Pillow
+matplotlib

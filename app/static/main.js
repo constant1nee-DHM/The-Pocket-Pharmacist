@@ -3,9 +3,9 @@ const canvas = document.getElementById('canvas');
 const screenshotContainer = document.getElementById('screenshotContainer');
 const uploadBtn = document.getElementById('uploadBtn');
 const message = document.getElementById('message');
-let uploadedFile = null; // Variable to store the uploaded file
+let uploadedFile = null; 
 let useScreenshotOverFile = 1;
-let isScreenshotTaken = false; // Variable to track if a screenshot has been taken
+let isScreenshotTaken = false; 
 
 navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
@@ -20,16 +20,13 @@ document.getElementById('filePicker').addEventListener('change', function() {
     const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
     document.getElementById('fileName').textContent = fileName;
 
-    // Store the uploaded file
     uploadedFile = this.files[0];
 
     useScreenshotOverFile = 0;
 
-    // Hide the video feed and screenshot button
     video.style.display = 'none';
     document.getElementById('screenshotBtn').style.display = 'none';
 
-    // Show the upload button
     uploadBtn.style.display = 'block';
 });
 
@@ -39,21 +36,23 @@ document.getElementById('screenshotBtn').addEventListener('click', () => {
     const context = canvas.getContext('2d');
     context.drawImage(video, 0, 0);
     
+    video.style.display = 'none';
+
     const img = document.createElement('img');
     img.src = canvas.toDataURL('image/png');
-    screenshotContainer.innerHTML = ''; // Clear previous screenshot
+    screenshotContainer.innerHTML = ''; 
     screenshotContainer.appendChild(img);
 
     useScreenshotOverFile = 1;
     
-    isScreenshotTaken = true; // Set the flag to true
-    uploadBtn.style.display = 'inline-block'; // Show upload button
+    isScreenshotTaken = true; 
+    uploadBtn.style.display = 'inline-block'; 
 });
 
 uploadBtn.addEventListener('click', async () => {
     let fileToUpload;
 
-    // Determine which file to upload
+
     if (useScreenshotOverFile) {
         const dataUrl = canvas.toDataURL('image/png');
         const blob = await (await fetch(dataUrl)).blob();
@@ -66,22 +65,20 @@ uploadBtn.addEventListener('click', async () => {
     }
 
     const formData = new FormData();
-    formData.append('file', fileToUpload); // Use the appropriate file
+    formData.append('file', fileToUpload); 
 
-    // Show loading indicator
     const loadingIndicator = document.getElementById('loadingIndicator');
-    loadingIndicator.style.display = 'block'; // Show loading indicator
-
+    loadingIndicator.style.display = 'block'; 
     try {
         const response = await fetch('http://127.0.0.1:5000/api/upload', {
             method: 'POST',
             body: formData,
         });
         const result = await response.json();
-        // message.textContent = result.message;
+     
 
-        // Hide loading indicator
-        loadingIndicator.style.display = 'none'; // Hide loading indicator
+    
+        loadingIndicator.style.display = 'none'; 
 
         const medication = result;
 
@@ -97,35 +94,32 @@ uploadBtn.addEventListener('click', async () => {
     } catch (error) {
         console.error("Error uploading file: ", error);
         message.textContent = "Error uploading file.";
-        loadingIndicator.style.display = 'none'; // Hide loading indicator
+        loadingIndicator.style.display = 'none'; 
     }
 });
 
-// Popup functionality
+
 const popup = document.getElementById('popup');
 const closePopup = document.getElementById('closePopup');
 
-// Function to show the popup
 function showPopup() {
     popup.style.display = 'block';
 }
 
-// Function to hide the popup
 function hidePopup() {
     popup.style.display = 'none';
 }
 
-// Event listener for closing the popup
 closePopup.addEventListener('click', hidePopup);
 
-// Close the popup when clicking outside of it
+
 window.addEventListener('click', (event) => {
     if (event.target === popup) {
         hidePopup();
     }
 });
 
-// Optional: Add a function to reset the application state
+
 function resetApp() {
     uploadedFile = null;
     useScreenshotOverFile = 1;
@@ -141,8 +135,8 @@ uploadBtn.addEventListener('click', () => {
     showPopup();
 });
 
-// Call resetApp when the popup is closed (if needed)
+
 closePopup.addEventListener('click', () => {
     hidePopup();
-    resetApp(); // Reset the application state if desired
+    resetApp(); 
 });

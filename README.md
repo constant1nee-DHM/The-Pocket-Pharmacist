@@ -10,11 +10,41 @@ The Pocket Pharmacist is a web application that leverages machine learning to id
 - **Camera Functionality**: Allows users to take and upload photos of their medication for easy identification.
 - **File Upload**: Users can upload images directly from their device for identification.
 
+
+## Identifiable Medications
+
+A-ferin, Apodorm, Apronax, Arveles, Aspirin, Dikloron, Dolcontin, Dolorex, Fentanyl, Hametan, Imovane, Majezik, Metpamid, Midazolam B. Braun, Morphin, Nobligan Retard, Oxycontin, Oxynorm, Parol, Sobril, Terbisil, Ultiva, Unisom, Valium Diazepam, and Xanor.
+
+
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Machine Learning**: Convolutional Neural Network, MLP, Pytorch, NumPy
 - **Backend**: Flask
+
+## Dataset
+
+This project uses a custom medication image dataset created through a combination of our own collected images and carefully curated selections from existing sources:
+
+- **Base Framework**: Initially organized using Roboflow.com (March 17, 2025)
+- **Customization**: We significantly enhanced the dataset by:
+  - Adding our own originally captured medication images
+  - Carefully selecting and curating only the most relevant and high-quality images from existing sources
+  - Ensuring diverse representation of medications to improve model accuracy
+- **Final Size**: 750 images after curation and additions
+- **Format**: Folder-based annotation structure
+- **Pre-processing**: 
+  - Auto-orientation of pixel data (with EXIF-orientation stripping)
+  - Resize to 640x640 (Stretch)
+- **Task Type**: Single-label Classification
+
+### Dataset Development Process
+
+Our dataset represents substantial original work beyond existing resources. We conducted a thorough selection process to identify the most useful and representative medication images, supplemented with our own photography to address gaps in coverage. This custom dataset was specifically tailored to achieve optimal performance for our use case.
+
+### Data Privacy & Usage
+
+All medication images used for training are intended for educational and identification purposes only. The model is designed to assist users in identifying medications but should not replace professional medical advice.
 
 ## Installation
 
@@ -36,10 +66,14 @@ To set up the project locally, follow these steps:
 2. **Start Development Server**
    ```bash
    py app/app.py
+   or python app/app.py
+   or python3 app/app.py
+   (depending on your version)
    ```
 
 ## Get Started
 
-1. Take a screenshot or upload an image using the buttons in the UI.
-2. Click on `Upload Image` and wait for the system to identify the medicine.
-3. View your medication information.
+1. Server should be running on http://127.0.0.1:5000
+2. Take a screenshot or upload an image using the buttons in the UI.
+3. Click on `Upload Image` and wait for the system to identify the medicine. (The first image usually takes 1.5 minutes as the model gets uploaded)
+4. View your medication information.
